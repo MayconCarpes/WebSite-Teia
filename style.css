@@ -1,0 +1,305 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: black;
+    color: #fff;
+    
+    text-align: center;
+    display: flex;
+    height: 500px;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: black;
+    background: url("/assests/empreendedorismo-univers.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.header-text{
+    padding-left: 40px;
+}
+
+/* Barra de Navegação Fixa com Logo à Esquerda e Links à Direita */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+nav .logo img {
+    height: 40px; /* Ajuste conforme necessário */
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: gray;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Adiciona um espaçamento para compensar a altura da barra fixa */
+body {
+    padding-top: 60px; /* Ajuste conforme a altura da barra de navegação */
+}
+
+/* Resto do CSS */
+
+header h1 {
+    font-size: 2em;
+}
+
+
+/* Missão - Visão - Valores */
+/* Estilo para a seção "Missão, Visão e Valores" */
+#missao-visao-valores {
+    padding: auto;
+    background-color: #f4f4f4;
+}
+
+#missao-visao-valores h2 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+/* Container dos cards */
+.cards-container {
+    display: flex;
+    justify-content: space-around; /* Espaço igual entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem em linha em telas menores */
+    gap: 20px; /* Espaço entre os cards */
+}
+
+/* Estilo para os cards */
+.card {
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do card em coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 16px;
+    border: 5px solid yellow;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    max-width: 300px; /* Largura máxima do card */
+    text-align: center; /* Centraliza o texto dentro do card */
+}
+
+.card img {
+    width: 100px; /* Define o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
+    border-radius: 8px; /* Opcional: arredonda os cantos */
+}
+
+
+
+.card img {
+    width: 100px; /* Define uma largura fixa para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
+    border-radius: 8px; /* Opcional: arredonda os cantos */
+    
+    
+}
+
+
+.card ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding da lista */
+}
+
+.card ul li {
+    margin-bottom: 5px; /* Espaço entre os itens da lista */
+}
+
+
+
+
+/* Estilo para a seção "Quem Somos" */
+#quem-somos {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+#quem-somos h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.quem-somos-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quem-somos-conteudo p {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.quem-somos-conteudo img {
+    width: 50%; /* Ajuste conforme necessário */
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Seções */
+ /* section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+*/
+
+
+section h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+.missao-visao-valores{
+    padding: 25px 5px;
+    background-color: black;
+}
+
+#missao-visao-valores {
+    padding: auto;
+    background-color: #000000;
+}
+
+/* Listas de Valores */
+section#missao-visao-valores ul {
+    
+    list-style-type: none;
+    padding-left: 0;
+}
+
+section#missao-visao-valores ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Membros Fundadores */
+.membro {
+    margin-bottom: 20px;
+}
+
+.membro h3 {
+    color: #005A8B;
+}
+
+.membro p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Mentores e Parceiros */
+#mentores ul, #parceiros ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#mentores ul li, #parceiros ul li {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Contatos */
+#contatos ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#contatos ul li a {
+    text-decoration: none;
+    color: #005A8B;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contatos ul li a:hover {
+    color: #00698C;
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    section {
+        padding: 15px;
+    }
+    #contatos ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
