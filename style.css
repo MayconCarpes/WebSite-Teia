@@ -181,15 +181,100 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-/* Estilos para a seção */
-section {
-    width: 100%; /* Faz a seção ocupar toda a largura da tela */
-    padding: 20px 0; /* Espaçamento vertical da seção */
-    background-color: #f4f4f4; /* Cor de fundo da seção */
+/* Estilo do Membros Fundadores */
+#membros-fundadores {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
 }
+
+#membros-fundadores h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.membro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.membro:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.membro div {
+    margin-right: 20px;
+}
+
+.membro img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid gray; /* Borda azul para destaque */
+}
+
+.membro-descricao h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.membro-descricao p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contato {
+    font-weight: bold;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .membro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .membro div {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .membro img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .membro-descricao h3 {
+        font-size: 20px;
+    }
+
+    .membro-descricao p {
+        font-size: 14px;
+    }
+}
+
+
+
+
 
 
 .section-content {
@@ -221,87 +306,59 @@ section {
     max-width: 800px;
     margin: 0 auto; /* Centraliza o texto */
     line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
-}
-
-/* Estilo para a seção "Membros Fundadores" */
-#membros-fundadores {
+}/* Estilo do Carrossel */
+.carrossel-container {
     width: 100%;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+    overflow: hidden; /* Oculta qualquer conteúdo que sair da área visível */
+    margin: 30px 0;
+    position: relative;
 }
 
-#membros-fundadores h2 {
-    font-size: 2em;
-    color: black;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-
-/* Estilo para cada membro */
-.membro {
-    max-width: 100%;
-    margin: 0 auto 40px;
+.carrossel {
     display: flex;
-    padding: 60px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    color: black;
+    animation: scroll 10s infinite linear; /* Animação para mover o carrossel */
 }
 
-.membro-descricao{
-    padding: 40px;
-}
-
-/* Container da imagem */
-.membro > div:first-child {
+.mentor-card {
+    min-width: 250px;
     margin-right: 20px;
-}
-
-/* Estilo da imagem */
-.membro img {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo do conteúdo de texto */
-.membro > div:last-child {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    text-align: left;
-}
-
-.membro h3 {
-    font-size: 1.5em;
-    color: black;
-    margin: 10px 0;
-}
-
-.membro p {
-    font-size: 1em;
-    color: black;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-.contato {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-weight: bold;
+    transition: transform 0.3s ease, scale 0.3s ease;
 }
 
-.contato a {
-
-    text-decoration: none;
+.mentor-card img {
+    max-width: 100%;
+    height: 150px; /* Defina a altura para imagens de mentores */
+    border-radius: 50%;
 }
 
-.contato a:hover {
-    text-decoration: underline;
+.mentor-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.mentor-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Efeito de aumento e pausa ao passar o mouse */
+.carrossel .mentor-card:hover {
+    transform: scale(1.1); /* Aumenta o card */
+    animation-play-state: paused; /* Pausa a animação */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Responsividade */
@@ -348,13 +405,13 @@ section#missao-visao-valores ul li {
 #mentores {
     width: 100%;
     padding: 40px 20px;
-    background-color: #f1f1f1;
+    background-color: black;
     text-align: center;
 }
 
 #mentores h2 {
-    font-size: 2em;
-    color: #333;
+    font-size: 5em;
+    color: white;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -372,14 +429,14 @@ section#missao-visao-valores ul li {
     color: #555;
     margin: 10px 0;
     padding: 10px;
-    background-color: #fff;
+    background-color: #181818;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Adiciona espaçamento e alinhamento ao conteúdo */
 #mentores li:hover {
-    background-color: #e0e0e0;
+    background-color: #181818;
 }
 
 /* Estilo responsivo para listas horizontais em telas maiores */
@@ -449,7 +506,7 @@ section#missao-visao-valores ul li {
 /* Estilo para a seção "Contatos" */
 #contatos {
     padding: 40px 80px;
-    background-color: #f9f9f9;
+    background-color: black;
 }
 
 .contatos-container {
@@ -518,6 +575,11 @@ button:hover {
     height: 450px;
     border: 0;
     border-radius: 8px;
+}
+
+.mapa h2 {
+    color: white;
+    text-align: center;
 }
 
 /* Responsividade */
