@@ -596,7 +596,7 @@ button:hover {
 
 /* Estilos para o Rodapé */
 .footer {
-    background-color: #333; /* Cor de fundo escura */
+    background-color: black; /* Cor de fundo escura */
     color: #fff; /* Texto branco */
     text-align: center; /* Alinha o texto no centro */
     padding: 20px 0; /* Espaçamento acima e abaixo */
