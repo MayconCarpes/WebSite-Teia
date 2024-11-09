@@ -596,8 +596,8 @@ button:hover {
 
 /* Estilos para o Rodapé */
 .footer {
-    background-color: black; /* Cor de fundo escura */
-    color: #fff; /* Texto branco */
+    background-color: white; /* Cor de fundo escura */
+    color: black; /* Texto branco */
     text-align: center; /* Alinha o texto no centro */
     padding: 20px 0; /* Espaçamento acima e abaixo */
     font-family: 'Arial', sans-serif; /* Define a fonte */
@@ -624,7 +624,7 @@ button:hover {
 }
 
 .social-links a {
-    color: #fff; /* Cor dos links */
+    color: black; /* Cor dos links */
     text-decoration: none; /* Remove o sublinhado */
     font-size: 18px; /* Tamanho da fonte para os links */
 }
@@ -636,6 +636,6 @@ button:hover {
 .footer p {
     font-size: 14px;
     margin-top: 20px;
-    color: #ccc; /* Cor mais suave para o texto copyright */
+    color: black; /* Cor mais suave para o texto copyright */
 }
 
