@@ -11,27 +11,6 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
-
-/* Cabeçalho */
-header {
-    background-color: black;
-    color: #fff;
-    
-    text-align: center;
-    display: flex;
-    height: 500px;
-    text-align: left;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: black;
-    background: url("/assests/empreendedorismo-univers.jpg") no-repeat center;
-    background-size: 100%;
-}
-
-.header-text{
-    padding-left: 40px;
-}
-
 /* Barra de Navegação Fixa com Logo à Esquerda e Links à Direita */
 nav {
     position: fixed;
@@ -76,6 +55,24 @@ nav ul li a:hover {
     color: #fff;
     border-radius: 5px;
 }
+/* Cabeçalho */
+header {
+
+    color: white;
+    display: flex;
+    height: 500px;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+    background: url("/assests/empreendedorismo-univers.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.header-text{
+    padding-left: 40px;
+}
+
+
 
 /* Adiciona um espaçamento para compensar a altura da barra fixa */
 body {
@@ -161,12 +158,6 @@ header h1 {
     background-color: #f4f4f4;
 }
 
-#quem-somos h2 {
-    text-align: center;
-    color: black;
-    margin-bottom: 20px;
-}
-
 .quem-somos-conteudo {
     display: flex;
     align-items: center;
@@ -179,7 +170,7 @@ header h1 {
     flex: 1;
     font-size: 1rem;
     line-height: 1.6;
-    color: #333;
+    color: black;
 }
 
 .quem-somos-conteudo img {
@@ -192,23 +183,146 @@ header h1 {
 
 
 
-/* Seções */
- /* section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+/* Estilos para a seção */
+section {
+    width: 100%; /* Faz a seção ocupar toda a largura da tela */
+    padding: 20px 0; /* Espaçamento vertical da seção */
+    background-color: #f4f4f4; /* Cor de fundo da seção */
 }
 
-*/
+
+.section-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #fff; 
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilo para a seção "Como Atuamos" */
+#como-atuamos {
+    width: 100%; /* Faz a seção ocupar toda a largura da tela */
+    padding: 60px 20px; /* Espaçamento vertical da seção */
+    background-color: black; /* Fundo escuro para contraste */
+    color: white; /* Define o texto como branco */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o título e o conteúdo dentro da seção */
+#como-atuamos h2 {
+    font-size: 2em;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+#como-atuamos p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+}
+
+/* Estilo para a seção "Membros Fundadores" */
+#membros-fundadores {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#membros-fundadores h2 {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* Estilo para cada membro */
+.membro {
+    max-width: 100%;
+    margin: 0 auto 40px;
+    display: flex;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    color: black;
+}
+
+.membro-descricao{
+    padding: 40px;
+}
+
+/* Container da imagem */
+.membro > div:first-child {
+    margin-right: 20px;
+}
+
+/* Estilo da imagem */
+.membro img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do conteúdo de texto */
+.membro > div:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    text-align: left;
+}
+
+.membro h3 {
+    font-size: 1.5em;
+    color: black;
+    margin: 10px 0;
+}
+
+.membro p {
+    font-size: 1em;
+    color: black;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.contato {
+    text-align: center;
+    font-weight: bold;
+}
+
+.contato a {
+
+    text-decoration: none;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+    .membro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .membro > div:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
 
 
 section h3 {
     margin-top: 10px;
     text-align: center;
 }
+
 .missao-visao-valores{
     padding: 25px 5px;
     background-color: black;
@@ -230,50 +344,195 @@ section#missao-visao-valores ul li {
     padding: 8px 0;
     border-bottom: 1px solid #eee;
 }
+/* Estilo para a seção "Mentores" */
+#mentores {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
 
-/* Membros Fundadores */
-.membro {
+#mentores h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilo para a lista de mentores */
+#mentores ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mentores li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adiciona espaçamento e alinhamento ao conteúdo */
+#mentores li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo responsivo para listas horizontais em telas maiores */
+@media (min-width: 768px) {
+    #mentores ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #mentores li {
+        width: 200px;
+    }
+}
+
+/* Estilo para a seção "Parceiros" */
+#parceiros {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#parceiros h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilo para a lista de parceiros */
+#parceiros ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#parceiros li {
+    font-size: 1.1em;
+    color: #444;
+    margin: 15px auto;
+    padding: 15px 20px;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Responsividade para exibir parceiros em linha em telas maiores */
+@media (min-width: 768px) {
+    #parceiros ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #parceiros li {
+        width: 280px;
+        text-align: center;
+    }
+}
+
+/* Estilo para a seção "Contatos" */
+#contatos {
+    padding: 40px 80px;
+    background-color: #f9f9f9;
+}
+
+.contatos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: space-around;
+}
+
+.formulario {
+    flex: 1;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h2 {
+    font-size: 1.8em;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.membro h3 {
-    color: #005A8B;
+.input-container {
+    margin-bottom: 15px;
 }
 
-.membro p {
-    font-size: 0.9em;
+.input-container label {
+    font-size: 1em;
     color: #555;
-}
-
-/* Mentores e Parceiros */
-#mentores ul, #parceiros ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#mentores ul li, #parceiros ul li {
+    display: block;
     margin-bottom: 5px;
-    color: #333;
 }
 
-/* Contatos */
-#contatos ul {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    gap: 10px;
+.input-container input,
+.input-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-#contatos ul li a {
-    text-decoration: none;
-    color: #005A8B;
-    font-weight: bold;
-    transition: color 0.3s;
+.input-container textarea {
+    resize: vertical;
 }
 
-#contatos ul li a:hover {
-    color: #00698C;
+button {
+    background-color: #005A8B;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
+button:hover {
+    background-color: #00426b;
+}
+
+/* Estilo para o iframe */
+.mapa iframe {
+    width: 450px;
+    height: 450px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contatos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa iframe {
+        width: 100%;
+    }
+}
+
+
 
 /* Rodapé */
 footer {
