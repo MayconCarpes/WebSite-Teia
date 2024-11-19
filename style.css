@@ -57,21 +57,30 @@ nav ul li a:hover {
 }
 /* Cabeçalho */
 header {
-
     color: white;
     display: flex;
-    height: 500px;
+    height: 570px;
     text-align: left;
     align-items: center;
     justify-content: flex-start;
-    background: url("/assests/empreendedorismo-univers.jpg") no-repeat center;
-    background-size: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("/assests/empreendedorismo-univers.jpg") no-repeat center;
+    background-size: cover;
 }
+
+
 
 .header-text{
     padding-left: 40px;
+    font-size: 2em;
+
+
 }
 
+header h1 {
+    font-size: 3em;
+    ;
+}
 
 
 /* Adiciona um espaçamento para compensar a altura da barra fixa */
@@ -81,9 +90,6 @@ body {
 
 /* Resto do CSS */
 
-header h1 {
-    font-size: 2em;
-}
 
 
 /* Missão - Visão - Valores */
@@ -596,8 +602,8 @@ button:hover {
 
 /* Estilos para o Rodapé */
 .footer {
-    background-color: white; /* Cor de fundo escura */
-    color: black; /* Texto branco */
+    background-color: black; /* Cor de fundo escura */
+    color: white; /* Texto branco */
     text-align: center; /* Alinha o texto no centro */
     padding: 20px 0; /* Espaçamento acima e abaixo */
     font-family: 'Arial', sans-serif; /* Define a fonte */
@@ -624,7 +630,7 @@ button:hover {
 }
 
 .social-links a {
-    color: black; /* Cor dos links */
+    color: white; /* Cor dos links */
     text-decoration: none; /* Remove o sublinhado */
     font-size: 18px; /* Tamanho da fonte para os links */
 }
@@ -636,6 +642,6 @@ button:hover {
 .footer p {
     font-size: 14px;
     margin-top: 20px;
-    color: black; /* Cor mais suave para o texto copyright */
+    color: white; /* Cor mais suave para o texto copyright */
 }
 
