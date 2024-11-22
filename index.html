@@ -10,28 +10,70 @@
 <body>
     <!-- Cabeçalho -->
    <!-- HTML atualizado -->
-<nav>
+   <nav>
     <div class="logo">
-       <a href="#inicio"> <img src="assests/logo.png" alt="TEIA Logo"  /></a> <!-- Substitua "logo.png" pelo caminho da sua logo -->
+        <a href="#inicio">LOGO</a>
     </div>
-    <ul>
+    <ul class="nav-links">
         <li><a href="#inicio">Home</a></li>
-        <li><a href="#quem-somos">Quem Somos</a></li>
-        <li><a href="#como-atuamos">Como Atuamos</a></li>
-        <li><a href="#mentores">Mentores</a></li>
-        <li><a href="#parceiros">Parceiros</a></li>
-        <li><a href="#contatos">Contatos</a></li>
+        <li><a href="#editais">Editais</a></li>
+        <li><a href="#conexao">Conexão</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
     </ul>
 </nav>
 
+<!-- HEADER -->
+<header class="header" id="inicio">
+    <!-- Texto sobre o carrossel -->
+    <div class="header-text">
+        <h1>TEIA</h1>
+        <p>Trilhas de <em>Empreendedorismo</em> e <em>Inovação</em> Acadêmica</p>
+    </div>
 
-    <header class="header" id="inicio">
-        <div class="header-text">
-            <h1>TEIA </h1>
-            <p>Trilhas de <em> Empreendedorismo</em> e <em> Inovação</em> Acadêmica</p>
-        </div> 
-    </header>
+    <!-- Carrossel -->
+    <div class="carousel">
+        <div class="slides">
+            <a href="https://www.linkedin.com/in/maycon-lu%C3%ADs-carpes-877283193/" target="_blank"><img src="/assests/carrosel - header/imagem 1.jpg" alt="Imagem 1"></a>
+            <a href="#link2"><img src="/assests/carrosel - header/imagem 2.jpg" alt="Imagem 2"></a>
+            <a href="#link3"><img src="/assests/carrosel - header/imagem 3.jpg" alt="Imagem 3"></a>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+</header>
 
+<script src="carousel.js"></script>
+
+
+<main>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos">
+       
+        <div class="quem-somos-conteudo">
+            <div>
+                <h2>Quem Somos</h2>
+                <p>A TEIA surgiu da iniciativa de professores e alunos dos cursos de Administração, Sistemas de Informação, Biologia e Zootecnia do IFSULDEMINAS - Campus Machado, inspirados pela participação no HACKATHON da Instituição. Movidos pelo entusiasmo e pela firme vontade de fazer a diferença na sociedade local, formamos um grupo de voluntários engajados em empreendedorismo, inovação e sustentabilidade. Nosso objetivo é promover o desenvolvimento econômico e social do território, gerando impactos positivos e duradouros para a comunidade.</p>
+            </div>
+            
+                <img src="/assests/corporativo.PNG" alt="Imagem representativa da TEIA">
+           
+        </div>  
+    </section>
+    
+
+    <!-- Como Atuamos -->
+    <section id="como-atuamos">
+        <h2>COMO ATUAMOS</h2>
+       <p>
+            Realizamos eventos multidisciplinares e interinstitucionais que incentivam ideias empreendedoras e inovadoras.
+            Oferecemos capacitações sob demanda para jovens empreendedores interessados em competições de ideação e modelagem de negócios.
+            Compartilhamos informações sobre editais de pré-incubação e incubação de empresas com os membros da nossa rede.
+        </p>
+    </section>
+
+    
     <!-- Missão, Visão e Valores -->
     <section class="missao-visao-valores" id="missao-visao-valores">
         <h2>Missão, Visão e Valores</h2>
@@ -64,31 +106,6 @@
         </div>
     </section>
     
-
-    <!-- Quem Somos -->
-    <section id="quem-somos">
-       
-        <div class="quem-somos-conteudo">
-            <div>
-                <h2>Quem Somos</h2>
-                <p>A TEIA surgiu da iniciativa de professores e alunos dos cursos de Administração, Sistemas de Informação, Biologia e Zootecnia do IFSULDEMINAS - Campus Machado, inspirados pela participação no HACKATHON da Instituição. Movidos pelo entusiasmo e pela firme vontade de fazer a diferença na sociedade local, formamos um grupo de voluntários engajados em empreendedorismo, inovação e sustentabilidade. Nosso objetivo é promover o desenvolvimento econômico e social do território, gerando impactos positivos e duradouros para a comunidade.</p>
-            </div>
-            
-                <img src="/assests/corporativo.PNG" alt="Imagem representativa da TEIA">
-           
-        </div>  
-    </section>
-    
-
-    <!-- Como Atuamos -->
-    <section id="como-atuamos">
-        <h2>COMO ATUAMOS</h2>
-       <p>
-            Realizamos eventos multidisciplinares e interinstitucionais que incentivam ideias empreendedoras e inovadoras.
-            Oferecemos capacitações sob demanda para jovens empreendedores interessados em competições de ideação e modelagem de negócios.
-            Compartilhamos informações sobre editais de pré-incubação e incubação de empresas com os membros da nossa rede.
-        </p>
-    </section>
 
     <!-- Membros Fundadores -->
     <section id="membros-fundadores">
@@ -230,6 +247,9 @@
         </ul>
     </section>
 
+
+</main>
+
     <!-- Contatos -->
 <section id="contatos">
     <div class="contatos-container">
@@ -287,6 +307,7 @@
     </div>
     <p>&copy; 2024 Maycon Luis Franco Carpes & Cauã Fortes Vieira</p>
 </footer>
+
 
 </body>
 </html>

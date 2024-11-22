@@ -11,84 +11,200 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
-/* Barra de Navegação Fixa com Logo à Esquerda e Links à Direita */
+/* Barra de navegação fixa e estilizada */
+/* <---  ----->  */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: black;
+    height: 75px;
+    background-color: #005eb8; /* Cor de fundo */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 0 20px; /* Espaçamento horizontal */
     z-index: 1000;
 }
 
-nav .logo img {
-    height: 40px; /* Ajuste conforme necessário */
-    width: auto;
+/* Estilo do texto da logo */
+nav .logo a {
+    color: #fff; /* Cor branca */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave no hover */
 }
 
-nav ul {
-    list-style-type: none;
+/* Hover na logo */
+nav .logo a:hover {
+    color: lightgray; /* Cor ao passar o mouse */
+}
+
+/* Estilo da lista */
+.nav-links {
+    list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px; /* Espaçamento entre os links */
     margin: 0;
     padding: 0;
+    color: #fff; /* Cor branca para o texto */
+    font-size: 1rem; /* Tamanho de fonte consistente */
+    font-weight: bold; /* Deixa o texto da lista em negrito */
+    text-transform: uppercase; /* Deixa os textos da lista em caixa alta */
+    cursor: pointer;
+    transition: color 0.3s; /* Transição suave no hover */
 }
 
-nav ul li {
+/* Hover na lista */
+.nav-links:hover {
+    color: lightgray; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo individual dos itens da lista */
+.nav-links li {
     display: inline;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 15px;
+/* Estilo dos links */
+.nav-links a {
+   
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: 500;
+    padding: 8px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Animação suave */ 
+}
+
+/* Efeito hover nos links */
+.nav-links a:hover {
+    background-color: lightgray;
+    color: #005eb8; /* Contraste com o fundo */
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
 }
+/* <---  ----->  */
 
-nav ul li a:hover {
-    background-color: gray;
-    color: #fff;
-    border-radius: 5px;
-}
+
 /* Cabeçalho */
-header {
-    color: white;
-    display: flex;
-    height: 570px;
+/* <---  ----->  */
+/* Estilização do Header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 610px; /* Define a altura do header */
+    overflow: hidden;
+    color: #fff;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 10%; /* Posiciona à esquerda */
+    transform: translateY(-50%);
     text-align: left;
-    align-items: center;
-    justify-content: flex-start;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url("/assests/empreendedorismo-univers.jpg") no-repeat center;
-    background-size: cover;
+    z-index: 2; /* Fica acima do carrossel */
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra no texto */
+}
+
+.header-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra no texto */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ocupa toda a altura do header */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Ajustado para o número de slides */
+    height: 100%;
+}
+
+.slides a {
+    flex: 1; /* Divide igualmente o espaço entre os slides */
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta as imagens ao espaço sem distorcer */
+}
+
+/* Sobreposição com opacidade */
+.carousel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Sobreposição preta com opacidade de 10% */
+    z-index: 1; /* Certifique-se de que seja menor que os links */
+    pointer-events: none; /* Permite clique nas imagens abaixo */
 }
 
 
-
-.header-text{
-    padding-left: 40px;
-    font-size: 2em;
-
-
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
 }
 
-header h1 {
-    font-size: 3em;
-    ;
+.carousel .prev {
+    left: 10px;
 }
 
+.carousel .next {
+    right: 10px;
+}
 
-/* Adiciona um espaçamento para compensar a altura da barra fixa */
-body {
-    padding-top: 60px; /* Ajuste conforme a altura da barra de navegação */
+.carousel button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text p {
+        font-size: 1.2rem;
+    }
 }
 
 /* Resto do CSS */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides a {
+    flex: 0 0 100%; /* Cada slide ocupa 100% da largura */
+}
 
 
 
@@ -96,12 +212,12 @@ body {
 /* Estilo para a seção "Missão, Visão e Valores" */
 #missao-visao-valores {
     padding: auto;
-    background-color: #f4f4f4;
+    background-color: #f7f7f7;
 }
 
 #missao-visao-valores h2 {
     text-align: center;
-    color: white;
+    color: black;
     font-size: 50px;
     margin-bottom: 30px;
 }
@@ -120,7 +236,7 @@ body {
     flex-direction: column; /* Organiza o conteúdo do card em coluna */
     align-items: center; /* Centraliza o conteúdo horizontalmente */
     padding: 16px;
-    border: 5px solid yellow;
+    border: 5px solid blue;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     max-width: 300px; /* Largura máxima do card */
@@ -296,8 +412,8 @@ body {
 #como-atuamos {
     width: 100%; /* Faz a seção ocupar toda a largura da tela */
     padding: 60px 20px; /* Espaçamento vertical da seção */
-    background-color: black; /* Fundo escuro para contraste */
-    color: white; /* Define o texto como branco */
+    background-color: #f7f7f7; /* Fundo escuro para contraste */
+    color: black; /* Define o texto como branco */
     text-align: center; /* Centraliza o texto */
 }
 
@@ -305,6 +421,7 @@ body {
 #como-atuamos h2 {
     font-size: 2em;
     margin-bottom: 20px; /* Espaço abaixo do título */
+    
 }
 
 #como-atuamos p {
@@ -312,7 +429,7 @@ body {
     max-width: 800px;
     margin: 0 auto; /* Centraliza o texto */
     line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
-}/* Estilo do Carrossel */
+}
 .carrossel-container {
     width: 100%;
     overflow: hidden; /* Oculta qualquer conteúdo que sair da área visível */
@@ -325,11 +442,71 @@ body {
     animation: scroll 10s infinite linear; /* Animação para mover o carrossel */
 }
 
+
+section h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.missao-visao-valores{
+    padding: 25px 5px;
+}
+
+/* Listas de Valores */
+section#missao-visao-valores ul {
+    
+    list-style-type: none;
+    padding-left: 0;
+}
+
+section#missao-visao-valores ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+/* Estilo para a seção "Mentores" */
+#mentores {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+#mentores h2 {
+    font-size: 5em;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilo para a lista de mentores */
+#mentores ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mentores li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #181818;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adiciona espaçamento e alinhamento ao conteúdo */
+#mentores li:hover {
+    background-color: #181818;
+}
+
+
 .mentor-card {
     min-width: 250px;
     margin-right: 20px;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #ebebeb;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -349,7 +526,7 @@ body {
 
 .mentor-card p {
     font-size: 14px;
-    color: #666;
+    color: rgb(59, 59, 59);
 }
 
 /* Efeito de aumento e pausa ao passar o mouse */
@@ -380,71 +557,6 @@ body {
     }
 }
 
-
-section h3 {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.missao-visao-valores{
-    padding: 25px 5px;
-    background-color: black;
-}
-
-#missao-visao-valores {
-    padding: auto;
-    background-color: #000000;
-}
-
-/* Listas de Valores */
-section#missao-visao-valores ul {
-    
-    list-style-type: none;
-    padding-left: 0;
-}
-
-section#missao-visao-valores ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-/* Estilo para a seção "Mentores" */
-#mentores {
-    width: 100%;
-    padding: 40px 20px;
-    background-color: black;
-    text-align: center;
-}
-
-#mentores h2 {
-    font-size: 5em;
-    color: white;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Estilo para a lista de mentores */
-#mentores ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#mentores li {
-    font-size: 1.2em;
-    color: #555;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #181818;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Adiciona espaçamento e alinhamento ao conteúdo */
-#mentores li:hover {
-    background-color: #181818;
-}
-
 /* Estilo responsivo para listas horizontais em telas maiores */
 @media (min-width: 768px) {
     #mentores ul {
@@ -462,7 +574,8 @@ section#missao-visao-valores ul li {
 /* Estilo para a seção "Parceiros" */
 #parceiros {
     width: 100%;
-    padding: 40px 20px;
+    height: 450px;
+    padding: 80px 40px;
     background-color: #f7f7f7;
     text-align: center;
 }
@@ -504,7 +617,7 @@ section#missao-visao-valores ul li {
     }
 
     #parceiros li {
-        width: 280px;
+        width: 500px;
         text-align: center;
     }
 }
@@ -512,7 +625,7 @@ section#missao-visao-valores ul li {
 /* Estilo para a seção "Contatos" */
 #contatos {
     padding: 40px 80px;
-    background-color: black;
+    background-color: #f7f7f7;
 }
 
 .contatos-container {
@@ -602,7 +715,7 @@ button:hover {
 
 /* Estilos para o Rodapé */
 .footer {
-    background-color: black; /* Cor de fundo escura */
+    background-color: #005eb8; /* Cor de fundo escura */
     color: white; /* Texto branco */
     text-align: center; /* Alinha o texto no centro */
     padding: 20px 0; /* Espaçamento acima e abaixo */
