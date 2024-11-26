@@ -18,7 +18,7 @@
         <li><a href="#inicio">Home</a></li>
         <li><a href="#editais">Editais</a></li>
         <li><a href="#conexao">Conexão</a></li>
-        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#quem-somos">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
     </ul>
 </nav>
@@ -46,7 +46,7 @@
 <script src="carousel.js"></script>
 
 
-<main>
+
 
     <!-- Quem Somos -->
     <section id="quem-somos">
@@ -248,11 +248,19 @@
     </section>
 
 
-</main>
 
-    <!-- Contatos -->
+
+
+
+     
+<!-- Contatos -->
 <section id="contatos">
     <div class="contatos-container">
+        <!-- Imagem -->
+        <div class="imagem-container">
+            <img src="/assests/discente-empreendedor.jpg" alt="Imagem de contato">
+        </div>
+
         <!-- Formulário de Contato -->
         <div class="formulario">
             <h2>Entre em Contato</h2>
@@ -264,7 +272,9 @@
                 </div>
 
                 <!-- E-mail -->
-                <div class="input-container">                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                <div class="input-container">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
                 </div>
 
                 <!-- Mensagem -->
@@ -279,17 +289,20 @@
                 </div>
             </form>
         </div>
-
-        <!-- Google Maps (Iframe) -->
-        <div class="mapa">
-            <h2>Localizados</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3707.0440243328826!2d-45.8929446248043!3d-21.70101489589348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca6b310a64f323%3A0x9ecc3a078d5481f5!2sIFSULDEMINAS%20-%20Campus%20Machado!5e0!3m2!1spt-BR!2sbr!4v1730421726702!5m2!1spt-BR!2sbr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
     </div>
 </section>
 
+
+
+  <!-- Google Maps (Iframe) -->
+<section class="map-section">
+    <div class="mapa">
+        <h2>Localizados</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3707.0440243328826!2d-45.8929446248043!3d-21.70101489589348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca6b310a64f323%3A0x9ecc3a078d5481f5!2sIFSULDEMINAS%20-%20Campus%20Machado!5e0!3m2!1spt-BR!2sbr!4v1730421726702!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
 
 
     <!-- Rodapé -->
