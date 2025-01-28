@@ -10,10 +10,11 @@
 <body>
     <!-- Cabeçalho -->
    <!-- HTML atualizado -->
-   <nav>
+   <nav id="barra-navegacao">
     <div class="logo">
         <a href="#inicio">LOGO</a>
     </div>
+
     <ul class="nav-links">
         <li><a href="#inicio">Home</a></li>
         <li><a href="#editais">Editais</a></li>
@@ -257,9 +258,45 @@
         </ul>
     </section>
 
+<!-- GALERIA -->
+    <section id="galeria">
+        <h2>GALERIA DE FOTOS</h2>
+        <div class="galeria-container">
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/1.jpg" alt="Imagem 1" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/2.jpg" alt="Imagem 2" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/3.jpg" alt="Imagem 3" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/1.jpg" alt="Imagem 4" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/2.jpg" alt="Imagem 5" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/3.jpg" alt="Imagem 6" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/1.jpg" alt="Imagem 7" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/2.jpg" alt="Imagem 8" onclick="abrirImagem(this.src)">
+            </div>
+            <div class="galeria-item">
+                <img src="/assests/galeria de fotos/3.jpg" alt="Imagem 9" onclick="abrirImagem(this.src)">
+            </div>
+        </div>
+        <div id="imagem-modal" class="modal" onclick="fecharImagem()">
+            <span class="fechar" onclick="fecharImagem()">&times;</span>
+            <img class="modal-conteudo" id="imagem-expandida">
+        </div>
+    </section>
 
-
-
+    <script src="image.js"></script>
 
 
      <!-- Contatos -->
