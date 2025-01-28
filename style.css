@@ -271,8 +271,23 @@ nav .logo a:hover {
     margin-bottom: 5px; /* Espaço entre os itens da lista */
 }
 
+/*#noticias e editias*/
+.noticias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
 
-
+.noticia-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px; /* Largura do card */
+    text-align: center;
+}
 
 /* Estilo para a seção "Quem Somos" */
 #quem-somos {

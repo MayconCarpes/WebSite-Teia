@@ -45,7 +45,17 @@
 
 <script src="carousel.js"></script>
 
-
+<section id="noticias-editais">
+    <h2>Notícias e Editais</h2>
+    <div class="noticias-container">
+        <div class="noticia-card">
+            <h3>Título da Notícia/Edital</h3>
+            <p>Descrição breve da notícia ou edital. Clique para saber mais.</p>
+            <a href="#">Leia mais</a>
+        </div>
+       
+    </div>
+</section>
 
 
     <!-- Quem Somos -->
@@ -252,47 +262,37 @@
 
 
 
-     
-<!-- Contatos -->
-<section id="contatos">
-    <div class="contatos-container">
-        <!-- Imagem -->
-        <div class="imagem-container">
-            <img src="/assests/discente-empreendedor.jpg" alt="Imagem de contato">
+     <!-- Contatos -->
+     <section id="contatos">
+        <div class="contatos-container">
+            <div class="imagem-container">
+                <img src="/assests/discente-empreendedor.jpg" alt="Imagem de contato">
+            </div>
+            <div class="formulario">
+                <h2>Entre em Contato</h2>
+                <form id="contactForm">
+                    <div class="input-container">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                    </div>
+                    <div class="input-container">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="input-container">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    <div class="input-container">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+                <div id="notification" style="display:none;">Seu dado foi enviado com sucesso!</div>
+            </div>
         </div>
+    </section>
 
-        <!-- Formulário de Contato -->
-        <div class="formulario">
-            <h2>Entre em Contato</h2>
-            <form action="" method="POST">
-                <!-- Nome -->
-                <div class="input-container">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-                </div>
-
-                <!-- E-mail -->
-                <div class="input-container">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
-                </div>
-
-                <!-- Mensagem -->
-                <div class="input-container">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Digite sua mensagem"></textarea>
-                </div>
-
-                <!-- Botão de Envio -->
-                <div class="input-container">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-
+    <script src="sheets.js"></script>
 
   <!-- Google Maps (Iframe) -->
 <section class="map-section">
