@@ -4,7 +4,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('https://script.google.com/macros/s/AKfycbx8x56601d0Pi0StETqosEQZHnUM25l7w6qwse5zQgDoiBIIJUlzsUtBxrwQrHitlvG/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyz65XyHWkLAQMJZBOS6YrKHsSN-Nhk8UZCVfQ7WWSXfF1ct1KlHSiaWWBiwArl1vgT/exec', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
