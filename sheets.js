@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
 
-        fetch('https://script.google.com/macros/s/AKfycbyvPN08N3QBqCSWaQZoKQobqANMKLEQBJu6nO6vEbMKIfQypf4AbNhWkkqmYlz-wo3S/exec', {
+        fetch('https://script.google.com/a/macros/alunos.ifsuldeminas.edu.br/s/AKfycbyvPN08N3QBqCSWaQZoKQobqANMKLEQBJu6nO6vEbMKIfQypf4AbNhWkkqmYlz-wo3S/exec', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
