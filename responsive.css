@@ -1,0 +1,171 @@
+/* ========================
+   ESTILO GERAL
+   ======================== */
+   body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    font-size: 1.15em;
+}
+
+/* ========================
+   TITULO PRINCIPAL
+   ======================== */
+h1 {
+    color: #fff;
+    margin-bottom: 1.5em;
+    font-size: 2.875em;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 30%);
+}
+
+/* ========================
+   FORMULÁRIO
+   ======================== */
+form {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 0.75em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.15em;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 0.75em 1.5em;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.15em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 150px;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+/* ========================
+   LISTA DE TAREFAS
+   ======================== */
+.tasks {
+    width: 90%;
+    max-width: 690px;
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 0.75em;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+.task:hover {
+    background: rgb(227 242 253 / 30%);
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+.task button {
+    background: #e74c3c;
+    border-radius: 50%;
+    padding: 0.375em 0.75em;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+}
+
+.task button.complete {
+    background: #2ecc71;
+}
+
+.task button.complete:hover {
+    background: #27ae60;
+}
+
+.task button:hover {
+    background: #c0392b;
+}
+
+/* ========================
+   CONTROLES
+   ======================== */
+.controls {
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+.controls button {
+    margin: 0 0.75em;
+}
+
+.controls input[type="file"] {
+    display: none;
+}
+
+/* ========================
+   RESPONSIVIDADE
+   ======================== */
+@media (max-width: 768px) {
+    body {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+    input[type="text"],
+    input[type="date"],
+    button {
+        width: 100%;
+    }
+    .tasks {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    .tasks {
+        width: 100%;
+        padding: 1em;
+    }
+}

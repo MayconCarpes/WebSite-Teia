@@ -1,0 +1,110 @@
+
+/* Estilo para a seção "Mentores" */
+#mentores {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+#mentores h2 {
+    font-size: 5em;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilo para a lista de mentores */
+#mentores ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mentores li {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #181818;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adiciona espaçamento e alinhamento ao conteúdo */
+#mentores li:hover {
+    background-color: #181818;
+}
+
+
+.mentor-card {
+    min-width: 250px;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, scale 0.3s ease;
+}
+
+.mentor-card img {
+    max-width: 100%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.mentor-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.mentor-card p {
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+}
+
+/* Efeito de aumento e pausa ao passar o mouse */
+.carrossel .mentor-card:hover {
+    transform: scale(1.1); /* Aumenta o card */
+    animation-play-state: paused; /* Pausa a animação */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+    .membro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .membro > div:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilo responsivo para listas horizontais em telas maiores */
+@media (min-width: 768px) {
+    #mentores ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #mentores li {
+        width: 200px;
+    }
+}

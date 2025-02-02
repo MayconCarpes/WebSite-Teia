@@ -1,0 +1,70 @@
+
+
+/* Estilo para a seção "Quem Somos" */
+#quem-somos {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.quem-somos-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quem-somos-conteudo p {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+}
+
+.quem-somos-conteudo img {
+    width: 50%; /* Ajuste conforme necessário */
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilo para a seção "Como Atuamos" */
+#como-atuamos {
+    width: 100%; /* Faz a seção ocupar toda a largura da tela */
+    padding: 60px 20px; /* Espaçamento vertical da seção */
+    background-color: #f7f7f7; /* Fundo escuro para contraste */
+    color: black; /* Define o texto como branco */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o título e o conteúdo dentro da seção */
+#como-atuamos h2 {
+    font-size: 2em;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    
+}
+
+#como-atuamos p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+}
+
+.missao-visao-valores{
+    padding: 25px 5px;
+}
+
+/* Listas de Valores */
+section#missao-visao-valores ul {
+    
+    list-style-type: none;
+    padding-left: 0;
+}
+
+section#missao-visao-valores ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}

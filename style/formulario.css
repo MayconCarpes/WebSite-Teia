@@ -1,0 +1,86 @@
+
+
+.formulario {
+    flex: 1; 
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilização dos campos de entrada */
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    font-size: 14px;
+    color: #555;
+}
+
+.input-container input,
+.input-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-container textarea {
+    resize: vertical;
+}
+
+/* Estilização do botão */
+.input-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contatos-container {
+        flex-direction: column; /* Empilha as divs em telas pequenas */
+        text-align: center; /* Alinha o conteúdo ao centro */
+    }
+
+    .imagem-container,
+    .formulario {
+        flex: unset; /* Remove o flex */
+        max-width: 100%; /* Garante que a largura da imagem e formulário ocupem 100% */
+    }
+
+    .imagem-container img {
+        width: 100%; /* A imagem ocupa toda a largura da div */
+        height: auto; /* Permite que a altura da imagem seja ajustada proporcionalmente */
+        max-height: 200px; /* Limita a altura da imagem em telas menores */
+    }
+}
+
+
+#loading {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #007BFF; /* Cor do texto de loading */
+    display: none; /* Inicialmente oculto */
+}
+
