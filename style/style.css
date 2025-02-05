@@ -163,103 +163,72 @@ nav .logo a:hover {
         .barra-oculta {
             display: none; /* Oculta a barra de navegação */
         }
-        
-/* Cabeçalho */
-/* <---  ----->  */
-/* Estilização do Header */
+ /* Ajuste do header */
 .header {
     position: relative;
     width: 100%;
-    height: 610px; /* Define a altura do header */
-    overflow: hidden;
+    height: 610px;
     color: #fff;
 }
 
+/* Centralizar texto */
 .header-text {
     position: absolute;
-    top: 50%; /* Centraliza verticalmente */
-    left: 10%; /* Posiciona à esquerda */
-    transform: translateY(-50%);
-    text-align: left;
-    z-index: 2; /* Fica acima do carrossel */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
 }
 
+/* Texto com efeito */
 .header-text h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra no texto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .header-text p {
     font-size: 1.5rem;
-    margin-top: 10px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra no texto */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 100%; /* Ocupa toda a altura do header */
-    overflow: hidden;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%; /* Ajustado para o número de slides */
-    height: 100%;
-}
-
-.slides a {
-    flex: 1; /* Divide igualmente o espaço entre os slides */
-}
-
-.slides img {
+/* Swiper Configuração */
+.swiper {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta as imagens ao espaço sem distorcer */
 }
 
-/* Sobreposição com opacidade */
-.carousel::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.swiper-slide img {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Sobreposição preta com opacidade de 10% */
-    z-index: 1; /* Certifique-se de que seja menor que os links */
-    pointer-events: none; /* Permite clique nas imagens abaixo */
+    object-fit: cover;
 }
 
+@media (max-width: 768px) { 
+    .swiper-slide img {
+        height: 500px; /* Ajuste a altura conforme necessário */
+    }
+}
 
-.carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.0);
-    border: none;
-    color: #fff;
-    font-size: 4rem;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 3;
+/* Personalizar botões do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
-.carousel .prev {
-    left: 10px;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
 }
 
-.carousel .next {
-    right: 10px;
-}
-
-.carousel button:hover {
-    background-color: rgba(255, 255, 255, 0.0);
-    color: #000;
+/* Paginação personalizada */
+.swiper-pagination-bullet {
+    background-color: white;
 }
 
 /* Responsividade */
@@ -271,18 +240,14 @@ nav .logo a:hover {
     .header-text p {
         font-size: 1.2rem;
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-/* Resto do CSS */
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-.slides a {
-    flex: 0 0 100%; /* Cada slide ocupa 100% da largura */
-}
 
 /* Estilo para a seção "Missão, Visão e Valores" */
 #missao-visao-valores {
@@ -312,6 +277,7 @@ nav .logo a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -447,9 +413,9 @@ nav .logo a:hover {
 }
 
 
-
-
-
+swiper-container {
+overflow: hidden;
+}
 
 .section-content {
     max-width: 800px; 
