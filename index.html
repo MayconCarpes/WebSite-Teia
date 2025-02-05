@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEIA - Trilhas de Empreendedorismo e Inovação Acadêmica</title>
-    <link rel="stylesheet" href="/style/style.css" >
-    <link rel="stylesheet" href="/style/noticia.css">
-    <link rel="stylesheet" href="/style/sobre.css">
-    <link rel="stylesheet" href="/style/mentores.css">
-    <link rel="stylesheet" href="/style/galeria.css">
-  <link rel="stylesheet" href="/style/formulario.css">
-    <link rel="stylesheet" href="/style/mapa.css">
-
-
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TEIA - Trilhas de Empreendedorismo e Inovação Acadêmica</title>
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="/style/noticia.css">
+        <link rel="stylesheet" href="/style/sobre.css">
+        <link rel="stylesheet" href="/style/mentores.css">
+        <link rel="stylesheet" href="/style/galeria.css">
+        <link rel="stylesheet" href="/style/formulario.css">
+        <link rel="stylesheet" href="/style/mapa.css">
+    
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    </head>
 <body>
 
 <!-- Cabeçalho -->
@@ -29,12 +30,105 @@
 
     <ul class="nav-links">
         <li><a href="#inicio">Home</a></li>
-        <li><a href="#editais">Editais</a></li>
+        <li><a href="#noticias-editais">Editais</a></li>
         <li><a href="#conexao">Conexão</a></li>
-        <li><a href="#quem-somos">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#como-atuamos">Sobre</a></li>
+        <li><a href="#contatos">Contato</a></li>
     </ul>
     </nav>
+    <style>
+        /* Estilos básicos */
+        #barra-navegacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            color: white;
+        }
+        
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        
+        /* Estilos do menu */
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        /* Estilos do menu hambúrguer */
+        .menu-toggle {
+            display: none; /* Oculto por padrão */
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
+        
+        /* Responsivo para telas menores */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none; /* Esconde a lista por padrão */
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+        
+            .nav-links li {
+                margin: 10px 0;
+            }
+        
+            .menu-toggle {
+                display: block; /* Exibe o ícone do menu */
+            }
+        
+            .nav-links.active {
+                display: flex; /* Mostra o menu quando ativo */
+            }
+        }
+        </style>
+        
+        <nav id="barra-navegacao">
+            <div class="logo">
+                <a href="#inicio">LOGO</a>
+            </div>
+        
+            <!-- Ícone do menu hambúrguer -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        
+            <ul class="nav-links">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#noticias-editais">Editais</a></li>
+                <li><a href="#conexao">Conexão</a></li>
+                <li><a href="#como-atuamos">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+        </script>
+        
+
+
+
 
 <!-- HEADER -->
     <header class="header" id="inicio">
@@ -56,66 +150,111 @@
     </div>
     </header>
 
-<!-- Notícia -->
-     <section id="noticias-editais">
+  <!-- Notícia -->
+    <section id="noticias-editais" class="container my-5">
+    <h2 class="text-center">Notícias e Editais</h2>
 
     <!-- Carrossel para dispositivos móveis -->
-    <div class="swiper-container">
+    <div class="swiper-container d-md-none">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="noticia-card">
+                <div class="card">
                     <h3>Título da Notícia/Edital 1</h3>
-                    <img src="/assests/noticia/1.png" alt="noticia 1">
-                    <p>Descrição breve da notícia ou edital. Clique para saber mais.</p>
-                    <a href="#">Leia mais</a>
+                    <img src="/assets/noticia/1.png" class="card-img-top" alt="noticia 1">
+                    <div class="card-body">
+                        <p class="card-text">Descrição breve da notícia ou edital. Clique para saber mais.</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="noticia-card">
+                <div class="card">
                     <h3>Título da Notícia/Edital 2</h3>
-                    <img src="/assests/noticia/1.png" alt="noticia 2">
-                    <p>Descrição breve da notícia ou edital. Clique para saber mais.</p>
-                    <a href="#">Leia mais</a>
+                    <img src="/assets/noticia/2.png" class="card-img-top" alt="noticia 2">
+                    <div class="card-body">
+                        <p class="card-text">Descrição breve da notícia ou edital. Clique para saber mais.</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="noticia-card">
+                <div class="card">
                     <h3>Título da Notícia/Edital 3</h3>
-                    <img src="/assests/noticia/1.png" alt="noticia 3">
-                    <p>Descrição breve da notícia ou edital. Clique para saber mais.</p>
-                    <a href="#">Leia mais</a>
+                    <img src="/assets/noticia/3.png" class="card-img-top" alt="noticia 3">
+                    <div class="card-body">
+                        <p class="card-text">Descrição breve da notícia ou edital. Clique para saber mais.</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
                 </div>
             </div>
-            <!-- Adicione mais slides conforme necessário -->
         </div>
-        <!-- Adiciona botões de navegação -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- Paginação do Swiper -->
+        <div class="swiper-pagination"></div>
     </div>
 
     <!-- Grade para dispositivos maiores -->
-    <div class="noticias-container">
-        <div class="noticia-card">
-            <h3>Título da Notícia/Edital 1</h3>
-            <img src="/assests/noticia/1.png" alt="noticia 1">
-            <p>Descrição breve da notícia ou edital. Clique para saber mais.</p>
-            <a href="#">Leia mais</a>
+    <div class="row d-none d-md-flex gap-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <h3>Título da Notícia/Edital 1</h3>
+                <img src="/assets/noticia/1.png" class="card-img-top" alt="noticia 1">
+                <div class="card-body">
+                    <p class="card-text">Descrição breve da notícia ou edital. Clique para saber mais.</p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+            </div>
         </div>
-        <div class="noticia-card">
-            <h3>Título da Notícia/Edital 2</h3>
-            <img src="/assests/noticia/1.png" alt="noticia 2">
-            <p>Descrição breve da notícia ou edital. Clique para saber mais.</p>
-            <a href="#">Leia mais</a>
+        <div class="col-md-4">
+            <div class="card">
+                <h3>Título da Notícia/Edital 2</h3>
+                <img src="/assets/noticia/2.png" class="card-img-top" alt="noticia 2">
+                <div class="card-body">
+                    <p class="card-text">Descrição breve da notícia ou edital. Clique para saber mais.</p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+            </div>
         </div>
-        <div class="noticia-card">
-            <h3>Título da Notícia/Edital 3</h3>
-            <img src="/assests/noticia/1.png" alt="noticia 3">
-            <p>Descrição breve da notícia ou edital. Clique para saber mais.</p>
-            <a href="#">Leia mais</a>
+        <div class="col-md-4">
+            <div class="card">
+                <h3>Título da Notícia/Edital 3</h3>
+                <img src="/assets/noticia/3.png" class="card-img-top" alt="noticia 3">
+                <div class="card-body">
+                    <p class="card-text">Descrição breve da notícia ou edital. Clique para saber mais.</p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+            </div>
         </div>
-        <!-- Adicione mais cards conforme necessário -->
     </div>
     </section>
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Inicialização do Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 30 }
+        }
+    });
+</script>
 
 
 <!-- Quem Somos -->
