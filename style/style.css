@@ -91,9 +91,79 @@ nav .logo a:hover {
 .barra-escura {
     background-color: rgba(0, 0, 0, 0.8); /* Cor escura com transparência */
 }
-/* <---  ----->  */
+/* <--- RESPONSIVEL ----->  */
 
+        /* Estilos básicos */
+        #barra-navegacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            color: white;
+        }
+        
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        
+        /* Estilos do menu */
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        /* Estilos do menu hambúrguer */
+        .menu-toggle {
+            display: none; /* Oculto por padrão */
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
 
+       
+        /* Responsivo para telas menores */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none; /* Esconde a lista por padrão */
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+        
+            .nav-links li {
+                margin: 10px 0;
+            }
+        
+            .menu-toggle {
+                display: block; /* Exibe o ícone do menu */
+            }
+        
+            .nav-links.active {
+                display: flex; /* Mostra o menu quando ativo */
+            }
+        }
+   
+
+        .barra-oculta {
+            display: none; /* Oculta a barra de navegação */
+        }
+        
 /* Cabeçalho */
 /* <---  ----->  */
 /* Estilização do Header */
@@ -214,61 +284,70 @@ nav .logo a:hover {
     flex: 0 0 100%; /* Cada slide ocupa 100% da largura */
 }
 
-
-
-/* Missão - Visão - Valores */
 /* Estilo para a seção "Missão, Visão e Valores" */
 #missao-visao-valores {
-    padding: auto;
+    padding: 40px 20px;
     background-color: #f7f7f7;
+    text-align: center;
 }
 
 #missao-visao-valores h2 {
-    text-align: center;
     color: black;
-    font-size: 50px;
+    font-size: 2.5em;
     margin-bottom: 30px;
 }
 
 /* Container dos cards */
 .cards-container {
-    display: flex;
-    justify-content: space-around; /* Espaço igual entre os cards */
-    flex-wrap: wrap; /* Permite que os cards quebrem em linha em telas menores */
-    gap: 20px; /* Espaço entre os cards */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas para "Missão" e "Visão" */
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Estilo para os cards */
 .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo do card em coluna */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    padding: 16px;
+    flex-direction: column;
+    align-items: center;
     border: 5px solid #005eb8;
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    max-width: 300px; /* Largura máxima do card */
-    text-align: center; /* Centraliza o texto dentro do card */
+    max-width: 400px;
 }
 
 .card img {
-    width: 100px; /* Define o tamanho da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
-    border-radius: 8px; /* Opcional: arredonda os cantos */
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-
-
-.card img {
-    width: 100px; /* Define uma largura fixa para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
-    border-radius: 8px; /* Opcional: arredonda os cantos */
-    
-    
+/* O card "Valores" deve ocupar toda a largura abaixo dos outros */
+.card:nth-child(3) { 
+    grid-column: span 2; /* Faz "Valores" ocupar duas colunas, ficando abaixo dos outros */
+    max-width: 100%; /* Para ocupar a largura total do container */
 }
 
+/* Responsividade: Alinhar os cards verticalmente em telas menores */
+@media (max-width: 768px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .card:nth-child(3) {
+        grid-column: auto; /* Remove a regra do grid para telas pequenas */
+    }
+}
 
 .card ul {
     list-style-type: none; /* Remove marcadores da lista */
@@ -339,6 +418,7 @@ nav .logo a:hover {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-align: justify;
 }
 
 @media (max-width: 768px) {

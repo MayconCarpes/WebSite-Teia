@@ -1,34 +1,55 @@
-
-
 /* Estilo para a seção "Quem Somos" */
 #quem-somos {
     padding: 40px 20px;
     background-color: #f4f4f4;
 }
 
+#quem-somos h2{
+    padding-left: 15px;
+}
+
 .quem-somos-conteudo {
     display: flex;
+    flex-direction: column; /* Padrão para dispositivos móveis */
     align-items: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center; /* Centraliza o texto em telas menores */
+}
+
+.quem-somos-conteudo div {
+    width: 100%;
 }
 
 .quem-somos-conteudo p {
-    flex: 1;
     font-size: 1rem;
     line-height: 1.6;
     color: black;
+    padding: 0 15px; /* Adiciona espaçamento lateral para melhor leitura em telas pequenas */
 }
 
 .quem-somos-conteudo img {
-    width: 50%; /* Ajuste conforme necessário */
+    width: 90%; /* Garante que a imagem se ajuste bem em telas menores */
     max-width: 400px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Ajustes para telas maiores (Tablets e Desktop) */
+@media screen and (min-width: 768px) {
+    .quem-somos-conteudo {
+        flex-direction: row;
+        text-align: left;
+    }
+    .quem-somos-conteudo div {
+        width: 50%;
+    }
+    .quem-somos-conteudo img {
+        width: 50%;
+    }
+}
 
 /* Estilo para a seção "Como Atuamos" */
 #como-atuamos {

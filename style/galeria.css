@@ -65,15 +65,18 @@
     display: block;
     max-width: 80%;
     max-height: 80%;
-    margin-top: 4%;
+    margin-top: 6%;
 }
 
 .fechar {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 100px; /* Ajuste a posição vertical */
+    right: 60px; /* Mantém alinhado à direita */
+    font-size: 30px;
     color: white;
-    font-size: 40px;
-    font-weight: bold;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
+
