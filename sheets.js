@@ -30,5 +30,4 @@ const handleSubmit = (event) => {
     });
 }
 
-
 document.getElementById('contactForm').addEventListener('submit', handleSubmit);
