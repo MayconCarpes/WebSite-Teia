@@ -10,20 +10,21 @@
 
 /* Estilização da imagem */
 .imagem-container {
-    flex: 2; 
-    height: 500px; 
+    flex: 2;
+    height: 400px; /* Definição padrão de altura */
     overflow: hidden;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .imagem-container img {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
+/* Galeria */
 #galeria {
     padding: 20px;
     text-align: center;
@@ -35,11 +36,21 @@
     gap: 15px;
 }
 
-.galeria-item img {
+/* Padronizando tamanho das imagens */
+.galeria-item {
     width: 100%;
-    height: auto;
+    height: 250px; /* Altura fixa para manter padrão */
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.3s;
 }
 
@@ -47,17 +58,17 @@
     transform: scale(1.05);
 }
 
-
+/* Modal */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.8); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-conteudo {
@@ -70,8 +81,8 @@
 
 .fechar {
     position: absolute;
-    top: 100px; 
-    right: 60px; 
+    top: 100px;
+    right: 60px;
     font-size: 30px;
     color: white;
     cursor: pointer;
@@ -79,4 +90,3 @@
     padding: 5px 10px;
     border-radius: 5px;
 }
-
