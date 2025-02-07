@@ -59,20 +59,20 @@
 /* Responsividade */
 @media (max-width: 768px) {
     .contatos-container {
-        flex-direction: column; /* Empilha as divs em telas pequenas */
-        text-align: center; /* Alinha o conteúdo ao centro */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .imagem-container,
     .formulario {
-        flex: unset; /* Remove o flex */
-        max-width: 100%; /* Garante que a largura da imagem e formulário ocupem 100% */
+        flex: unset; 
+        max-width: 100%; 
     }
 
     .imagem-container img {
-        width: 100%; /* A imagem ocupa toda a largura da div */
-        height: auto; /* Permite que a altura da imagem seja ajustada proporcionalmente */
-        max-height: 200px; /* Limita a altura da imagem em telas menores */
+        width: 100%; 
+        height: auto; 
+        max-height: 200px; 
     }
 }
 
@@ -80,7 +80,7 @@
 #loading {
     margin-top: 10px;
     font-size: 16px;
-    color: #007BFF; /* Cor do texto de loading */
-    display: none; /* Inicialmente oculto */
+    color: #007BFF; 
+    display: none; 
 }
 

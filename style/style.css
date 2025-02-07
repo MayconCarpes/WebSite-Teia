@@ -69,27 +69,27 @@ nav .logo a:hover {
 /* Estilo dos links */
 .nav-links a {
    
-    color: #fff; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
+    color: #fff; 
+    text-decoration: none; 
     font-weight: 500;
-    padding: 8px 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s, color 0.3s; /* Animação suave */ 
+    padding: 8px 15px;
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 /* Efeito hover nos links */
 .nav-links a:hover {
     background-color: lightgray;
-    color: #005eb8; /* Contraste com o fundo */
+    color: #005eb8; 
     font-weight: bold;
 }
 
 #barra-navegacao {
-    transition: background-color 0.3s ease; /* Transição suave */
+    transition: background-color 0.3s ease;
 }
 
 .barra-escura {
-    background-color: rgba(0, 0, 0, 0.8); /* Cor escura com transparência */
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 /* <--- RESPONSIVEL ----->  */
 
@@ -126,7 +126,7 @@ nav .logo a:hover {
         
         /* Estilos do menu hambúrguer */
         .menu-toggle {
-            display: none; /* Oculto por padrão */
+            display: none;
             font-size: 2rem;
             cursor: pointer;
             color: white;
@@ -136,7 +136,7 @@ nav .logo a:hover {
         /* Responsivo para telas menores */
         @media screen and (max-width: 768px) {
             .nav-links {
-                display: none; /* Esconde a lista por padrão */
+                display: none; 
                 flex-direction: column;
                 position: absolute;
                 top: 60px;
@@ -151,17 +151,17 @@ nav .logo a:hover {
             }
         
             .menu-toggle {
-                display: block; /* Exibe o ícone do menu */
+                display: block;
             }
         
             .nav-links.active {
-                display: flex; /* Mostra o menu quando ativo */
+                display: flex;
             }
         }
    
 
         .barra-oculta {
-            display: none; /* Oculta a barra de navegação */
+            display: none; 
         }
  /* Ajuste do header */
 .header {
@@ -413,7 +413,7 @@ nav .logo a:hover {
 }
 
 
-swiper-container {
+.swiper-container {
 overflow: hidden;
 }
 
