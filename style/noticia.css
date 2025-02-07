@@ -8,97 +8,97 @@
 
 /* Estilização do card de notícia */
 .noticia-card {
-    background-color: #ffffff; /* Cor de fundo branca */
-    border: 1px solid #e0e0e0; /* Borda mais suave */
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0; 
     border-radius: 8px;
     padding: 20px;
     margin: 15px;
-    width: 300px; /* Largura do card */
+    width: 300px; 
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.2s, box-shadow 0.2s; /* Transição suave para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s; 
 }
 
-/* Efeito de hover no card */
+
 .noticia-card:hover {
-    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilização do título da notícia */
 .noticia-card h3 {
-    font-size: 20px; /* Tamanho do título */
-    color: #333; /* Cor do texto */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 20px; 
+    color: #333; 
+    margin-bottom: 10px; 
 }
 
 /* Estilização da imagem */
 .noticia-card img {
-    width: 100%; /* A imagem ocupa toda a largura do card */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Bordas arredondadas na imagem */
-    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
 }
 
 /* Estilização da descrição */
 .noticia-card p {
-    font-size: 14px; /* Tamanho da descrição */
-    color: #666; /* Cor do texto da descrição */
-    margin-bottom: 15px; /* Espaçamento abaixo da descrição */
+    font-size: 14px; 
+    color: #666; 
+    margin-bottom: 15px; 
 }
 
 /* Estilização do link "Leia mais" */
 .noticia-card a {
-    display: inline-block; /* Para aplicar padding */
-    padding: 10px 15px; /* Espaçamento interno */
-    background-color: #007BFF; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: background-color 0.3s; /* Transição suave para hover */
+    display: inline-block; 
+    padding: 10px 15px; 
+    background-color: #007BFF; 
+    color: white; 
+    border-radius: 5px; 
+    text-decoration: none;
+    transition: background-color 0.3s; 
 }
 
 /* Efeito de hover no link */
 .noticia-card a:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    background-color: #0056b3; 
 }
 
 /* Estilização do contêiner do carrossel */
 .swiper-container {
     width: 100%;
-    height: auto; /* Ajusta a altura automaticamente */
-    margin: 20px 0; /* Espaçamento acima e abaixo do carrossel */
+    height: auto; 
+    margin: 20px 0; 
 }
 
 /* Estilização do slide */
 .swiper-slide {
     display: flex;
-    justify-content: center; /* Centraliza o card no slide */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; 
+    align-items: center;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .noticias-container {
-        display: none; /* Oculta a grade em telas menores */
+        display: none; 
     }
 
     .swiper-container {
-        display: block; /* Exibe o carrossel em telas menores */
+        display: block; 
     }
 
     .noticia-card {
-        width: 90%; /* Largura do card no carrossel */
-        margin: 10px auto; /* Centraliza o card no carrossel */
+        width: 90%; 
+        margin: 10px auto; 
     }
 }
 
 @media (min-width: 769px) {
     .swiper-container {
-        display: none; /* Oculta o carrossel em telas maiores */
+        display: none; 
     }
 
     .noticias-container {
-        display: flex; /* Exibe a grade em telas maiores */
+        display: flex; 
     }
 }

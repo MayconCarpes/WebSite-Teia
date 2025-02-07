@@ -505,46 +505,46 @@ section h3 {
 
 /* Estilos para o Rodapé */
 .footer {
-    background-color: #005eb8; /* Cor de fundo escura */
-    color: white; /* Texto branco */
-    text-align: center; /* Alinha o texto no centro */
-    padding: 20px 0; /* Espaçamento acima e abaixo */
-    font-family: 'Arial', sans-serif; /* Define a fonte */
+    background-color: #005eb8; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    font-family: 'Arial', sans-serif; 
 }
 
 .footer h2 {
-    font-size: 24px; /* Tamanho maior para o título */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-size: 24px; 
+    margin-bottom: 10px; 
 }
 
 .footer p {
-    font-size: 16px; /* Tamanho da fonte para o parágrafo */
-    margin-top: 10px; /* Espaçamento superior */
+    font-size: 16px; 
+    margin-top: 10px; 
 }
 
 .social-links {
-    list-style: none; /* Remove os marcadores da lista */
+    list-style: none; 
     padding: 0;
 }
 
 .social-links li {
-    display: inline; /* Exibe os itens em linha */
-    margin: 0 10px; /* Espaçamento entre os itens */
+    display: inline; 
+    margin: 0 10px; 
 }
 
 .social-links a {
-    color: white; /* Cor dos links */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 18px; /* Tamanho da fonte para os links */
+    color: white; 
+    text-decoration: none;
+    font-size: 18px; 
 }
 
 .social-links a:hover {
-    color: #4CAF50; /* Cor ao passar o mouse (verde) */
+    color: #4CAF50; 
 }
 
 .footer p {
     font-size: 14px;
     margin-top: 20px;
-    color: white; /* Cor mais suave para o texto copyright */
+    color: white; 
 }
 

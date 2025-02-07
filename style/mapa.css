@@ -1,8 +1,8 @@
 
 /* Container do mapa */
 .mapa {
-    max-width: 800px; /* Limita a largura máxima */
-    width: 90%; /* Largura adaptável */
+    max-width: 800px; 
+    width: 90%; 
     padding: 15px;
     border-radius: 45px; 
     text-align: center;
@@ -19,8 +19,8 @@
 /* Estilização da seção de mapa */
 .map-section {
     display: flex;
-    justify-content: center; /* Centraliza o mapa horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; 
+    align-items: center; 
     padding: 20px;
     background-color: #f5f5f5;
 }
@@ -44,6 +44,6 @@
     }
 
     .mapa iframe {
-        height: 300px; /* Reduz altura do mapa em telas menores */
+        height: 300px; 
     }
 }

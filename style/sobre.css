@@ -10,12 +10,12 @@
 
 .quem-somos-conteudo {
     display: flex;
-    flex-direction: column; /* Padrão para dispositivos móveis */
+    flex-direction: column; 
     align-items: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center; /* Centraliza o texto em telas menores */
+    text-align: center; 
 }
 
 .quem-somos-conteudo div {
@@ -26,11 +26,11 @@
     font-size: 1rem;
     line-height: 1.6;
     color: black;
-    padding: 0 15px; /* Adiciona espaçamento lateral para melhor leitura em telas pequenas */
+    padding: 0 15px; 
 }
 
 .quem-somos-conteudo img {
-    width: 90%; /* Garante que a imagem se ajuste bem em telas menores */
+    width: 90%; 
     max-width: 400px;
     height: auto;
     border-radius: 8px;
@@ -53,25 +53,25 @@
 
 /* Estilo para a seção "Como Atuamos" */
 #como-atuamos {
-    width: 100%; /* Faz a seção ocupar toda a largura da tela */
-    padding: 60px 20px; /* Espaçamento vertical da seção */
-    background-color: #f7f7f7; /* Fundo escuro para contraste */
-    color: black; /* Define o texto como branco */
-    text-align: center; /* Centraliza o texto */
+    width: 100%; 
+    padding: 60px 20px; 
+    background-color: #f7f7f7;
+    color: black; 
+    text-align: center; 
 }
 
 /* Estilo para o título e o conteúdo dentro da seção */
 #como-atuamos h2 {
     font-size: 2em;
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-bottom: 20px; 
     
 }
 
 #como-atuamos p {
     font-size: 1.2em;
     max-width: 800px;
-    margin: 0 auto; /* Centraliza o texto */
-    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+    margin: 0 auto; 
+    line-height: 1.6; 
 }
 
 .missao-visao-valores{
