@@ -293,8 +293,8 @@ nav .logo a:hover {
 
 /* O card "Valores" deve ocupar toda a largura abaixo dos outros */
 .card:nth-child(3) { 
-    grid-column: span 2; /* Faz "Valores" ocupar duas colunas, ficando abaixo dos outros */
-    max-width: 100%; /* Para ocupar a largura total do container */
+    grid-column: span 2; 
+    max-width: 100%;
 }
 
 /* Responsividade: Alinhar os cards verticalmente em telas menores */
@@ -311,13 +311,13 @@ nav .logo a:hover {
     }
 
     .card:nth-child(3) {
-        grid-column: auto; /* Remove a regra do grid para telas pequenas */
+        grid-column: auto; 
     }
 }
 
 .card ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove padding da lista */
+    list-style-type: none; 
+    padding: 0;
 }
 
 .card ul li {
@@ -428,14 +428,14 @@ overflow: hidden;
 
 .carrossel-container {
     width: 100%;
-    overflow: hidden; /* Oculta qualquer conteúdo que sair da área visível */
+    overflow: hidden; 
     margin: 30px 0;
     position: relative;
 }
 
 .carrossel {
     display: flex;
-    animation: scroll 10s infinite linear; /* Animação para mover o carrossel */
+    animation: scroll 10s infinite linear; 
 }
 
 
