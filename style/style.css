@@ -50,10 +50,8 @@ nav .logo a {
     transition: color 0.3s; /* Transição suave no hover */
 }
 
-/* Hover na logo */
-nav .logo a:hover {
-    color: lightgray; /* Cor ao passar o mouse */
-}
+
+
 
 
 /* Hover na lista */
